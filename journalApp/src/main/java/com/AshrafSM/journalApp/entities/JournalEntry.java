@@ -1,20 +1,40 @@
 package com.AshrafSM.journalApp.entities;
 
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+import java.util.Date;
+
+@Document(collection = "journal_entries")
 public class JournalEntry
 {
 
-    private long id;
+    @Id
+    private ObjectId id;
 
     private String title;
 
-    public long getId() {
+    private String content;
+
+    private LocalDateTime date;
+
+    public LocalDateTime getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDateTime date) {
+        this.date = date;
+    }
+
+    public ObjectId getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(ObjectId id) {
         this.id = id;
     }
 
@@ -34,6 +54,6 @@ public class JournalEntry
         this.content = content;
     }
 
-    private String content;
+
 
 }

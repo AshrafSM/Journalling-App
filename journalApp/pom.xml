@@ -31,6 +31,13 @@
 	</properties>
 	<dependencies>
 
+		<!-- Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
 		<!--Dependency for changes based detection and accordingly server restart-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
