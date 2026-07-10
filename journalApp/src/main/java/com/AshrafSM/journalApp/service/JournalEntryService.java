@@ -32,7 +32,7 @@ public class JournalEntryService {
 
     public void deleteById(ObjectId id)
     {
-        journalEntryRepository.deleteById(id);
+        journalEntryRepository.deleteById(id );
     }
 
 

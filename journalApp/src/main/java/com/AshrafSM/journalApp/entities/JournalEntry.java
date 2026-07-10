@@ -30,6 +30,7 @@ public class JournalEntry
         this.date = date;
     }
 
+
     public ObjectId getId() {
         return id;
     }
